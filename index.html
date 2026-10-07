@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Price Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand" id="txtBrand">PRICE CHECK</div>
+    <div class="stats">
+      <span><span id="txtRoundLabel">ROUND</span> <b id="roundNum">1</b></span>
+      <span><span id="txtScoreLabel">SCORE</span> <b id="scoreNum">0</b></span>
+      <span class="lives" id="lives"></span>
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn" id="settingsBtn" aria-label="Settings"></button>
+      <button class="icon-btn" id="exitBtn" aria-label="Exit"></button>
+    </div>
+  </header>
+
+  <div class="stage" id="stage">
+    <div class="item-photo" id="itemPhoto">
+      <img id="itemImg" src="" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+    </div>
+    <div class="item-name" id="itemName">Loading…</div>
+
+    <div class="price-block">
+      <div class="orig-price" id="origPrice"></div>
+      <div class="sale-price" id="salePrice"></div>
+    </div>
+
+    <div class="timer-track"><div class="timer-fill" id="timerFill"></div></div>
+
+    <div class="overlay" id="startScreen">
+      <h1 id="txtStartTitle">PRICE CHECK</h1>
+      <p id="txtStartP1"></p>
+      <p id="txtStartP2"></p>
+      <button class="startBtn" id="playBtn">Start</button>
+    </div>
+
+    <div class="overlay hidden" id="gameOverScreen">
+      <h1 id="txtGameOverTitle">ROUND OVER</h1>
+      <div class="big" id="finalScore">0</div>
+      <p><span id="txtReachedRound">You reached round</span> <span id="finalRound">1</span>.</p>
+      <input type="text" id="nameInput" maxlength="20" placeholder="Your name (optional)">
+      <button class="startBtn" id="saveBtn">Save score</button>
+      <button class="startBtn ghost" id="retryBtn">Play Again</button>
+      <div id="leaderboard"></div>
+    </div>
+
+    <div class="overlay hidden" id="settingsScreen">
+      <h1 id="txtSettingsTitle">Sound Settings</h1>
+      <div class="slider-row">
+        <label id="txtMusicVolumeLabel" for="musicVolume">Music volume</label>
+        <input type="range" id="musicVolume" min="0" max="100" value="50">
+      </div>
+      <div class="slider-row">
+        <label id="txtSfxVolumeLabel" for="sfxVolume">Sound effects volume</label>
+        <input type="range" id="sfxVolume" min="0" max="100" value="70">
+      </div>
+      <button class="startBtn" id="closeSettingsBtn">Close</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="act" id="acceptBtn">✓ Deal's Good</button>
+    <button class="act" id="discardBtn">✗ Discard</button>
+  </div>
+  <div id="feedback"></div>
+</div>
+
+<audio id="bgmAudio" loop></audio>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/items.js"></script>
+<script src="assets/js/text.js"></script>
+<script src="assets/js/audio-config.js"></script>
+<script src="assets/js/audio.js"></script>
+<script src="assets/js/game.js"></script>
+</body>
+</html>

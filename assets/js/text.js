@@ -1,0 +1,33 @@
+// Price Check — every piece of on-screen text lives here.
+// Edit any value below to change what shows in the game. Nothing else needs to change.
+window.GAME_TEXT = {
+  brand: "PRICE CHECK",
+  roundLabel: "ROUND",
+  scoreLabel: "SCORE",
+
+  startTitle: "PRICE CHECK",
+  startParagraph1: "Every item shows a sale price with the original crossed out above it — a fair markup, so the deal is legit. Tap Deal's Good before the timer runs out.",
+  startParagraph2: "But sometimes the sale price jumps up mid-round. If it does, tap Discard within 5 seconds. Every round, the clock gets shorter.",
+  startButton: "Start",
+
+  acceptButton: "✓ Deal's Good",
+  discardButton: "✗ Discard",
+  exitButton: "Exit",
+  settingsButton: "⚙",
+
+  feedbackGoodEye: "✓ Good eye!",
+  feedbackCaughtIt: "✓ Caught it!",
+  feedbackWrongCall: "✗ Wrong call",
+  feedbackTooSlow: "⏱ Too slow!",
+
+  gameOverTitle: "ROUND OVER",
+  reachedRoundText: "You reached round",
+  namePlaceholder: "Your name (optional)",
+  saveButton: "Save score",
+  retryButton: "Play Again",
+
+  settingsTitle: "Sound Settings",
+  musicVolumeLabel: "Music volume",
+  sfxVolumeLabel: "Sound effects volume",
+  closeSettingsButton: "Close",
+};
