@@ -13,12 +13,12 @@ window.GAME_CONFIG = {
 
   // When a round turns bad mid-round, the crossed-out ORIGINAL price goes UP
   // by a percentage in this range...
-  twist_orig_increase_min_percent: 35,
-  twist_orig_increase_max_percent: 70,
+  twist_orig_increase_min_percent: 70,
+  twist_orig_increase_max_percent: 90,
 
   // ...and the SALE price goes DOWN by a percentage in this range.
-  twist_sale_decrease_min_percent: 15,
-  twist_sale_decrease_max_percent: 35,
+  twist_sale_decrease_min_percent: 30,
+  twist_sale_decrease_max_percent: 50,
 
   // Chance (0-1) that any given round includes a price jump at all.
   twist_probability: 0.6,
