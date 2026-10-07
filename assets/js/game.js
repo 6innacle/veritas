@@ -45,6 +45,7 @@
       txtStartTitle: TXT.startTitle,
       txtStartP1: TXT.startParagraph1,
       txtStartP2: TXT.startParagraph2,
+      txtStartP3: TXT.startParagraph3,
       playBtn: TXT.startButton,
       acceptBtn: TXT.acceptButton,
       discardBtn: TXT.discardButton,
