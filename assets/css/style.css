@@ -27,7 +27,7 @@ header .brand{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.15re
 .lives span.full::after{content:'♥'; color:var(--wrong); font-size:16px; line-height:16px; display:block}
 .lives span.empty::after{content:'♡'; color:var(--text-muted); font-size:16px; line-height:16px; display:block}
 
-.stage{background:var(--card); border-radius:18px; padding:26px 20px 20px; box-shadow:0 14px 34px rgba(0,0,0,.35); position:relative; min-height:480px}
+.stage{background:var(--card); border-radius:18px; padding:26px 20px 20px; box-shadow:0 14px 34px rgba(0,0,0,.35); position:relative; min-height:570px}
 
 .item-photo{width:120px; height:120px; margin:0 auto; border-radius:14px; background:var(--surface-light) url('../img/ui/item-frame.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; overflow:hidden}
 .item-photo img{width:100%; height:100%; object-fit:cover}
