@@ -7,7 +7,7 @@ window.GAME_TEXT = {
 
   startTitle: "PRICE CHECK",
   startParagraph1: "Every item shows a sale price with the original crossed out above it — a fair markup, so the deal is legit. Tap Deal's Good before the timer runs out.",
-  startParagraph2: "But sometimes the sale price jumps up mid-round. If it does, tap Discard within 5 seconds. Every round, the clock gets shorter.",
+  startParagraph2: "But sometimes the prices shift mid-round: the original price goes up while the sale price drops. If it does, tap Discard within 5 seconds. Every round, the clock gets shorter.",
   startButton: "Start",
 
   acceptButton: "✓ Deal's Good",

@@ -86,9 +86,14 @@
     return Math.round(base * (1 + pct));
   }
 
-  function jumpedPrice(base) {
-    const pct = randBetween(CFG.price_jump_min_percent, CFG.price_jump_max_percent) / 100;
-    return Math.round(base * (1 + pct));
+  function inflatedOrigPrice(orig) {
+    const pct = randBetween(CFG.twist_orig_increase_min_percent, CFG.twist_orig_increase_max_percent) / 100;
+    return Math.round(orig * (1 + pct));
+  }
+
+  function slashedSalePrice(sale) {
+    const pct = randBetween(CFG.twist_sale_decrease_min_percent, CFG.twist_sale_decrease_max_percent) / 100;
+    return Math.round(sale * (1 - pct));
   }
 
   function updateHUD() {
@@ -142,12 +147,13 @@
       const elapsedAtJump = Math.max(0.3, rt - remainingAtJump);
 
       const t1 = setTimeout(() => {
-        salePrice = jumpedPrice(salePrice);
-        origPrice = markupPrice(salePrice);
+        origPrice = inflatedOrigPrice(origPrice);
+        salePrice = slashedSalePrice(salePrice);
         revealed = true;
         els.sale.textContent = fmt(salePrice);
         els.orig.textContent = fmt(origPrice);
         els.sale.classList.remove('flip'); void els.sale.offsetWidth; els.sale.classList.add('flip');
+        els.orig.classList.remove('flip'); void els.orig.offsetWidth; els.orig.classList.add('flip');
       }, elapsedAtJump * 1000);
       state.timers.push(t1);
 
