@@ -12,7 +12,7 @@ window.GAME_TEXT = {
 
   acceptButton: "✓ Deal's Good",
   discardButton: "✗ Discard",
-  exitButton: "Exit",
+  exitButton: "X",
   settingsButton: "⚙",
 
   feedbackGoodEye: "✓ Good eye!",
