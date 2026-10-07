@@ -50,6 +50,8 @@ header .brand{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.15re
   width:14px; height:14px; background:var(--bg2); border-radius:50%; border:3px solid var(--tag-edge);
 }
 .sale-price.flip{animation:flip .35s ease}
+.orig-price.flip{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.2)}100%{transform:scale(1)}}
 @keyframes flip{0%{transform:rotate(-2deg) scale(1)}45%{transform:rotate(3deg) scale(1.14)}100%{transform:rotate(-2deg) scale(1)}}
 
 .timer-track{height:8px; border-radius:5px; background:var(--surface-light); overflow:hidden; margin-top:18px}
